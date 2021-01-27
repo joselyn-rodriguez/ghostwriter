@@ -1,18 +1,14 @@
+<!-- this is where that main page is coming from -->
+
 {{ partial "header.html" . }}
 
-<div id="post-index" class="container" itemscope="" itemtype="https://schema.org/Blog">
+<div id="post-content" class="container" itemscope="" itemtype="https://schema.org/Blog">
     {{ partial "intro.html" . }}
 
-    <ol class="post-list">
-        {{ $pag := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-        {{ range $pag.Pages }}
-            {{ partial "post-stub.html" . }}
-        {{ end }}
-    </ol>
+    <h1>Hi. I'm Joselyn </h1>
+    <p> I am currently a first year Ph.D. student at Rutgers University working on topics in perception. I am particularly interested in auditory perception, specifically language and speech. Some areas of interest include bilingual and non-native speech perception, accent and talker adaptation, first and second language acquisition, phonetic variability, ambiguity resolution, and the use of computational, behavioral, and neuro-imaging technology. My secondary interests include topics in music perception and overlap between music and speech.</p>
+    <p>My non-academic interests include traveling, studying languages (Mandarin and Korean mainly), practicing violin, web programming, and writing. </p>
 
-    <div class="post-navigation">
-        {{ partial "pagination.html" . }}
-    </div>
 </div>
 
 {{ partial "footer.html" . }}
